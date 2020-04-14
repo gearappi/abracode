@@ -1,0 +1,73 @@
+$extraSmall: 375px;
+$small: 600px;
+$medium: 960px;
+$large: 1264px;
+$extraLarge: 1904px;
+
+//Variables for text
+$headSection: 24px;
+$headHeightLineSection: 29px;
+$textSection: 16px;
+$textHeadLineSection: 20px;
+$subheadSection: 16px;
+$subheadHeightLineSection: 20px;
+
+//Variables for colors
+$primaryColor: #FFA800;
+$primaryTextColor: #E0C203;
+$secondaryColor: #202020;
+$yellowBgr: #FFC600;
+$yellowBgr2: #FFC900;
+
+//Fonts
+$font-family: 'Montserrat', sans-serif;
+$body-font-family: 'Montserrat', sans-serif;
+
+@mixin respond-to($media) {
+    @if $media == handhelds {
+      @media only screen and (max-width: $small -1) { @content; }
+    }
+    @else if $media == medium-screens {
+      @media only screen and (min-width: $small){ @content; }
+    }
+    @else if $media == large-screens {
+      @media only screen and (min-width: $medium){ @content; }
+    }
+    @else if $media == wide-screens {
+      @media only screen and (min-width: $large) { @content; }
+    }
+    @else if $media == specialMobile {
+      @media (max-width: $medium) { @content; }
+    }
+}
+body{
+  font-family: $font-family !important;
+  overflow: hidden;
+}
+
+.mxw1200{
+  max-width: 1200px;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+//classes for text
+.text-bold{font-weight: bold;}
+
+//classes for colors
+.primaryColor { color: $primaryColor !important}
+.secondaryColor { color: $secondaryColor !important}
+
+//classes for sections
+.headSection {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  @include respond-to(large-screens) { text-align: left; }
+}
+.i-header {
+  z-index: 22222;
+}
