@@ -1,11 +1,10 @@
 <template>
-  <div>MainPage</div>
+  <div>AboutPage</div>
 </template>
 
 <script>
 export default {
-  name: "App",
-
+  name: "AboutPage",
   components: {},
 
   data() {

@@ -1,11 +1,10 @@
 <template>
-  <div>MainPage</div>
+  <div>NotificationPage</div>
 </template>
 
 <script>
 export default {
-  name: "App",
-
+  name: "NotificationPage",
   components: {},
 
   data() {
